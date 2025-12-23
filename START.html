@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiParqueo - Inicio Rápido</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial; background: #000; color: #FFD600; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
+        header { text-align: center; margin-bottom: 60px; border-bottom: 4px solid #FFD600; padding-bottom: 30px; }
+        h1 { font-size: 3em; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 10px; }
+        .subtitle { font-size: 1.2em; text-transform: uppercase; letter-spacing: 2px; color: #999; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin: 40px 0; }
+        .card { border: 2px solid #FFD600; padding: 30px; background: #1A1A1A; transition: all 0.3s; }
+        .card:hover { box-shadow: 8px 8px 0px #FFD600; transform: translateY(-5px); }
+        .card h3 { font-size: 1.5em; margin-bottom: 15px; text-transform: uppercase; }
+        .card p { color: #ccc; line-height: 1.8; margin-bottom: 15px; }
+        .btn { display: inline-block; background: #FFD600; color: #000; padding: 12px 24px; border: 2px solid #FFD600; text-decoration: none; font-weight: bold; text-transform: uppercase; cursor: pointer; transition: all 0.3s; }
+        .btn:hover { background: #000; color: #FFD600; }
+        .credentials { background: #FFD600; color: #000; padding: 20px; margin: 30px 0; border: 2px solid #000; }
+        .credentials h4 { margin-bottom: 15px; font-size: 1.2em; }
+        .cred { padding: 10px 0; border-bottom: 1px solid #000; }
+        .cred:last-child { border-bottom: none; }
+        .cred strong { font-weight: bold; }
+        .icon { font-size: 2.5em; margin-bottom: 10px; }
+        .steps { background: #FFD600; color: #000; padding: 30px; margin: 40px 0; border: 2px solid #000; }
+        .steps h3 { font-size: 1.5em; margin-bottom: 20px; text-transform: uppercase; }
+        .steps ol { margin-left: 20px; line-height: 2; }
+        .steps li { margin-bottom: 10px; font-weight: 500; }
+        .features { columns: 2; column-gap: 30px; }
+        .features li { margin-bottom: 15px; list-style: none; }
+        .features li:before { content: "✓ "; color: #FFD600; font-weight: bold; margin-right: 10px; }
+        .centered { text-align: center; margin: 40px 0; }
+        .file-list { background: #1A1A1A; border: 2px solid #FFD600; padding: 20px; margin: 20px 0; }
+        .file-list code { color: #FFD600; font-family: monospace; display: block; padding: 5px 0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🅰️ MiParqueo</h1>
+            <p class="subtitle">Sistema Urbano de Parqueaderos</p>
+            <p style="margin-top: 20px; color: #FFD600;">Aplicación Web Profesional</p>
+        </header>
+
+        <section class="grid">
+            <div class="card">
+                <div class="icon">🚀</div>
+                <h3>Inicio Rápido</h3>
+                <p>Abre el archivo index.html en tu navegador para acceder a la aplicación completa con login unificado y paneles personalizados.</p>
+                <a href="index.html" class="btn">Abrir Aplicación</a>
+            </div>
+
+            <div class="card">
+                <div class="icon">📖</div>
+                <h3>Documentación</h3>
+                <p>Lee la guía completa de uso, características y especificaciones técnicas en el archivo README.md</p>
+                <a href="README.md" class="btn" download>Descargar README</a>
+            </div>
+
+            <div class="card">
+                <div class="icon">🛠️</div>
+                <h3>Desarrollo</h3>
+                <p>Aprende cómo expandir la aplicación, agregar nuevas funcionalidades e integrar APIs reales.</p>
+                <a href="DEVELOPMENT.md" class="btn" download>Ver Guía</a>
+            </div>
+        </section>
+
+        <section class="credentials">
+            <h4>🔐 Credenciales de Prueba</h4>
+            <div class="cred">
+                <strong>👤 Usuario Regular:</strong><br>
+                Correo: <code>usuario@example.com</code><br>
+                Contraseña: <code>1234</code>
+            </div>
+            <div class="cred">
+                <strong>👨‍💼 Administrador:</strong><br>
+                Correo: <code>admin@example.com</code><br>
+                Contraseña: <code>1234</code>
+            </div>
+        </section>
+
+        <section class="steps">
+            <h3>📋 Pasos para Comenzar</h3>
+            <ol>
+                <li><strong>Abre el archivo:</strong> Haz doble clic en <code>index.html</code></li>
+                <li><strong>Ingresa credenciales:</strong> Usa una de las credenciales de prueba arriba</li>
+                <li><strong>Explora el panel:</strong> Usuario o Admin se cargan automáticamente</li>
+                <li><strong>Navega las pestañas:</strong> Cada sección tiene funcionalidades diferentes</li>
+                <li><strong>Cierra sesión:</strong> Usa el botón "Cerrar sesión" para volver al login</li>
+            </ol>
+        </section>
+
+        <section>
+            <h2 style="text-align: center; margin-bottom: 30px; text-transform: uppercase;">✨ Características Principales</h2>
+            
+            <div class="grid">
+                <div>
+                    <h4 style="text-transform: uppercase; margin-bottom: 15px;">👤 Panel de Usuario</h4>
+                    <ul class="features">
+                        <li>Mis Reservas activas</li>
+                        <li>Historial de parqueaderos</li>
+                        <li>Gestión de vehículos</li>
+                        <li>Perfil personal</li>
+                        <li>Estadísticas de uso</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 style="text-transform: uppercase; margin-bottom: 15px;">👨‍💼 Panel de Administrador</h4>
+                    <ul class="features">
+                        <li>Dashboard con KPIs</li>
+                        <li>Gestión de parqueaderos</li>
+                        <li>Administración de usuarios</li>
+                        <li>Control de reservas</li>
+                        <li>Reportes y análisis</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 style="text-align: center; margin-bottom: 30px; text-transform: uppercase;">📁 Estructura del Proyecto</h2>
+            <div class="file-list">
+                <code><strong>APP parqueadero LAguarda/</strong></code>
+                <code>├── <strong style="color: #FFD600;">index.html</strong> ← Abrir esto</code>
+                <code>├── css/</code>
+                <code>│   └── styles.css</code>
+                <code>├── js/</code>
+                <code>│   └── app.js</code>
+                <code>├── README.md</code>
+                <code>├── DEVELOPMENT.md</code>
+                <code>├── CONFIGURATION.md</code>
+                <code>├── TESTING.md</code>
+                <code>└── SUMMARY.md</code>
+            </div>
+        </section>
+
+        <section>
+            <h2 style="text-align: center; margin-bottom: 30px; text-transform: uppercase;">🎨 Diseño Visual</h2>
+            <div class="grid">
+                <div class="card">
+                    <h4 style="text-transform: uppercase; margin-bottom: 15px;">Colores</h4>
+                    <ul style="list-style: none;">
+                        <li style="margin-bottom: 10px;"><span style="background: #FFD600; color: #000; padding: 5px 10px;">Amarillo #FFD600</span></li>
+                        <li style="margin-bottom: 10px;"><span style="background: #000; color: #FFD600; padding: 5px 10px;">Negro #000000</span></li>
+                        <li style="margin-bottom: 10px;"><span style="background: #00E676; color: #000; padding: 5px 10px;">Verde #00E676</span></li>
+                        <li style="margin-bottom: 10px;"><span style="background: #FF1744; color: #fff; padding: 5px 10px;">Rojo #FF1744</span></li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h4 style="text-transform: uppercase; margin-bottom: 15px;">Características</h4>
+                    <ul class="features">
+                        <li>Bordes gruesos (2-4px)</li>
+                        <li>Sin bordes redondeados</li>
+                        <li>Tipografía en mayúsculas</li>
+                        <li>Sombras urbanas</li>
+                        <li>100% responsive</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 style="text-align: center; margin-bottom: 30px; text-transform: uppercase;">💻 Tecnologías</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 20px; text-align: center;">
+                <div class="card">
+                    <div style="font-size: 2em; margin-bottom: 10px;">📄</div>
+                    <strong>HTML5</strong>
+                    <p style="margin-top: 10px; font-size: 0.9em;">Estructura semántica</p>
+                </div>
+                <div class="card">
+                    <div style="font-size: 2em; margin-bottom: 10px;">🎨</div>
+                    <strong>CSS3 + Tailwind</strong>
+                    <p style="margin-top: 10px; font-size: 0.9em;">Estilos avanzados</p>
+                </div>
+                <div class="card">
+                    <div style="font-size: 2em; margin-bottom: 10px;">⚙️</div>
+                    <strong>JavaScript ES6+</strong>
+                    <p style="margin-top: 10px; font-size: 0.9em;">Lógica interactiva</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="centered">
+            <h2 style="text-transform: uppercase; margin-bottom: 30px;">¿Necesitas ayuda?</h2>
+            <div class="grid">
+                <div class="card">
+                    <h4>📖 Documentación Completa</h4>
+                    <p style="margin-bottom: 15px;">Consulta README.md para instrucciones detalladas de uso</p>
+                </div>
+                <div class="card">
+                    <h4>🔧 Ampliar la Aplicación</h4>
+                    <p style="margin-bottom: 15px;">Lee DEVELOPMENT.md para aprender a expandir funcionalidades</p>
+                </div>
+                <div class="card">
+                    <h4>⚙️ Configuración</h4>
+                    <p style="margin-bottom: 15px;">Revisa CONFIGURATION.md para personalizar la app</p>
+                </div>
+                <div class="card">
+                    <h4>🧪 Testing</h4>
+                    <p style="margin-bottom: 15px;">Usa TESTING.md como checklist de validación</p>
+                </div>
+            </div>
+        </section>
+
+        <footer style="text-align: center; margin-top: 60px; padding-top: 30px; border-top: 2px solid #FFD600; color: #999;">
+            <p style="margin-bottom: 10px;">MiParqueo © 2025 - Sistema Urbano de Parqueaderos</p>
+            <p style="font-size: 0.9em;">Construido con ❤️ usando HTML5, CSS3 y JavaScript</p>
+            <p style="font-size: 0.8em; margin-top: 15px; color: #666;">
+                ✅ Completamente funcional | 📱 100% Responsive | 🚀 Listo para expandir
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
