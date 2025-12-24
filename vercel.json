@@ -6,24 +6,20 @@
     "api/**/*.js": {
       "memory": 1024,
       "maxDuration": 60
-    },
-    "server.js": {
-      "memory": 1024,
-      "maxDuration": 60
     }
   },
-  "routes": [
+  "rewrites": [
     {
-      "src": "/api/(.*)",
-      "dest": "/api/$1"
+      "source": "/api/(.*)",
+      "destination": "/api/$1"
     },
     {
-      "src": "/(.*\\..*)",
-      "dest": "/$1"
+      "source": "/(.*\\..*)",
+      "destination": "/$1"
     },
     {
-      "src": "/(.*)",
-      "dest": "/index.html"
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ],
   "env": {
@@ -33,6 +29,8 @@
     "node_modules/**",
     ".git/**",
     ".env",
+    ".env.local",
+    ".env.production.local",
     "*.db",
     "*.sqlite3"
   ]
