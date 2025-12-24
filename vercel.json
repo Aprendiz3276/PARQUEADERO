@@ -2,12 +2,6 @@
   "version": 2,
   "buildCommand": "npm install",
   "devCommand": "node server.js",
-  "functions": {
-    "api/**/*.js": {
-      "memory": 1024,
-      "maxDuration": 60
-    }
-  },
   "rewrites": [
     {
       "source": "/api/(.*)",
@@ -26,4 +20,3 @@
     "NODE_ENV": "production"
   }
 }
-
