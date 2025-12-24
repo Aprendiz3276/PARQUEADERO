@@ -24,14 +24,6 @@
   ],
   "env": {
     "NODE_ENV": "production"
-  },
-  "ignoreFiles": [
-    "node_modules/**",
-    ".git/**",
-    ".env",
-    ".env.local",
-    ".env.production.local",
-    "*.db",
-    "*.sqlite3"
-  ]
+  }
 }
+
