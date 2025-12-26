@@ -57,6 +57,11 @@ app.use(async (req, res, next) => {
 
 // Health check endpoint
 app.get('/api/health', (req, res) => {
+    const dbTypeEnv = process.env.DB_TYPE || 'no definido';
+    const hasDatabaseUrl = !!process.env.DATABASE_URL;
+    const databaseUrlPreview = process.env.DATABASE_URL ? 
+        process.env.DATABASE_URL.substring(0, 30) + '...' : 'no definido';
+    
     res.status(200).json({ 
         status: dbInitialized ? 'ok' : (initError ? 'error' : 'initializing'),
         message: 'Servidor funcionando',
@@ -64,7 +69,14 @@ app.get('/api/health', (req, res) => {
         environment: 'Vercel',
         nodeEnv: process.env.NODE_ENV,
         dbStatus: dbInitialized ? 'connected' : (initError ? 'failed' : 'connecting'),
-        error: initError ? initError.message : null
+        error: initError ? initError.message : null,
+        // Info de diagnóstico
+        debug: {
+            DB_TYPE: dbTypeEnv,
+            DATABASE_URL_configured: hasDatabaseUrl,
+            DATABASE_URL_preview: databaseUrlPreview,
+            initializationAttempted: !!initPromise
+        }
     });
 });
 
