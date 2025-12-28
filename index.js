@@ -1,3 +1,6 @@
-import app from '../server.js';
+import app from './server.js';
 
-export default app;
+// Handler para Vercel serverless
+export default async (req, res) => {
+  return app(req, res);
+};
